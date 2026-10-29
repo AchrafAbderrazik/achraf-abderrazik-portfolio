@@ -164,7 +164,7 @@ function AdditionalWork({
           <a
             href={githubProfile}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener noreferrer"
             className="group inline-flex items-center gap-2 text-sm text-fg-muted transition-colors hover:text-fg"
           >
             <GithubIcon size={16} />

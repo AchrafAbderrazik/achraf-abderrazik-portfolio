@@ -31,7 +31,7 @@ function NotFoundDocument({ locale }: { locale: Locale }) {
         <ThemeScript />
       </head>
       <body>
-        <title>{`${content.ui.notFound.metaTitle} — ${content.site.name}`}</title>
+        <title>{`${content.ui.notFound.metaTitle} | ${content.site.name}`}</title>
         <SiteShell content={content}>
           <NotFoundView content={content} />
         </SiteShell>

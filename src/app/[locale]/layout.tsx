@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
     metadataBase: siteUrl,
     title: {
       default: site.seo.title,
-      template: `%s — ${site.name}`,
+      template: `%s | ${site.name}`,
     },
     description: site.seo.description,
     applicationName: site.name,

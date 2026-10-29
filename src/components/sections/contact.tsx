@@ -1,5 +1,6 @@
 import type { Locale } from "@/content/i18n";
 import type { Content } from "@/lib/content";
+import { fill } from "@/lib/i18n";
 
 import { Reveal } from "../motion/reveal";
 import { ButtonLink } from "../ui/button";
@@ -19,9 +20,11 @@ type ContactProps = {
   locale: Locale;
   contact: Content["contact"];
   site: Content["site"];
+  /** Accessible name of the profile links: `{network}` and `{name}` (ui.profileLink). */
+  profileLabel: string;
 };
 
-export function Contact({ locale, contact, site }: ContactProps) {
+export function Contact({ locale, contact, site, profileLabel }: ContactProps) {
   const email = site.contact.email.trim() || null;
   const bookingUrl = site.contact.bookingUrl.trim() || null;
   const socials = site.socials.filter((social) => social.href.trim().length > 0);
@@ -97,7 +100,8 @@ export function Contact({ locale, contact, site }: ContactProps) {
                               key={social.label}
                               href={social.href}
                               target="_blank"
-                              rel="noopener noreferrer"
+                              rel="me noopener noreferrer"
+                              aria-label={fill(profileLabel, { network: social.label, name: site.name })}
                               className="inline-flex h-9 items-center gap-2 rounded-full border border-line-strong px-4 text-sm text-fg-muted transition-colors hover:border-tint/25 hover:text-fg"
                             >
                               <Icon size={15} />

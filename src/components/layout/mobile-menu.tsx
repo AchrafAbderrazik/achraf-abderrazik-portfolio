@@ -180,7 +180,8 @@ export function MobileMenu({
                   key={social.label}
                   href={social.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
+                  aria-label={social.ariaLabel}
                   className="hover:text-fg"
                 >
                   {social.label}

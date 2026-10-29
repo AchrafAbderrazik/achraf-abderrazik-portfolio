@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import type { Locale } from "@/content/i18n";
-import type { SocialLink } from "@/content/types";
+import type { ProfileLink } from "@/content/types";
 import { cn } from "@/lib/cn";
 
 import { ButtonLink } from "../ui/button";
@@ -31,7 +31,7 @@ export type SiteHeaderProps = {
   cta: HeaderLink;
   homeHref: string;
   email: string | null;
-  socials: SocialLink[];
+  socials: ProfileLink[];
   labels: {
     home: string;
     mainNav: string;

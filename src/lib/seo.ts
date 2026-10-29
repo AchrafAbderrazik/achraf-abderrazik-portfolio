@@ -16,7 +16,7 @@ export function pageMetadata(
 ): Metadata {
   const { locale, site } = content;
   const url = localizeHref(locale, page.path);
-  const socialTitle = page.title ? `${page.title} — ${site.name}` : site.seo.title;
+  const socialTitle = page.title ? `${page.title} | ${site.name}` : site.seo.title;
 
   return {
     ...(page.title ? { title: page.title } : {}),

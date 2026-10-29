@@ -19,6 +19,12 @@ export const ui: UiContent = {
 
   language: { label: { en: "Language", fr: "Langue" } },
 
+  // The LinkedIn and GitHub links, for screen readers. Starts with the visible label.
+  profileLink: {
+    en: "{network} profile of {name} (opens in a new tab)",
+    fr: "{network} : profil d’{name} (s’ouvre dans un nouvel onglet)",
+  },
+
   theme: {
     label: { en: "Theme", fr: "Thème" },
     current: { en: "Theme: {theme}", fr: "Thème : {theme}" },

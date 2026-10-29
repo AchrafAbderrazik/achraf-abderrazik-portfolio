@@ -18,6 +18,9 @@ export type SocialLink = {
   href: string;
 };
 
+/** A social link as rendered, with its accessible name ("LinkedIn profile of …, opens in a new tab"). */
+export type ProfileLink = SocialLink & { ariaLabel: string };
+
 /** A numbered section heading: "01 —— Selected work" + title + optional intro. */
 export type SectionHeading = { index: string; eyebrow: Copy; title: Copy; intro?: Copy };
 
@@ -25,6 +28,9 @@ export type SectionHeading = { index: string; eyebrow: Copy; title: Copy; intro?
 
 export type SiteContent = {
   name: string;
+  /** First and last name, for search engines (structured data). */
+  givenName: string;
+  familyName: string;
   /** Professional title: with the name, the homepage's main heading; also titles and structured data. */
   role: Copy;
   /** Short descriptors for the app manifest and the share image's alt text. */
@@ -115,8 +121,8 @@ export type AboutContent = {
     /** Link to a case study when `project` is set: "{project} case study". */
     projectCaseStudy: Copy;
   };
-  /** `acronym` is the school's short name, for search engines. */
-  education: { school: string; acronym: string; degree: Copy; period: string; status: Copy };
+  /** `acronym` is the school's short name and `campus` its city, both shown and used by search engines. */
+  education: { school: string; acronym: string; campus?: string; degree: Copy; period: string; status: Copy };
   languages: Localized<string[]>;
   openTo: Copy[];
   experience: ExperienceItem[];
@@ -294,6 +300,8 @@ export type UiContent = {
   skipLink: Copy;
   header: { home: Copy; mainNav: Copy; openMenu: Copy; closeMenu: Copy; menu: Copy; mobileNav: Copy };
   language: { label: Copy };
+  /** Accessible name of the LinkedIn and GitHub links: `{network}` and `{name}`. */
+  profileLink: Copy;
   /** The theme switch. `current` takes `{theme}`, the name of the current choice. */
   theme: { label: Copy; current: Copy; dark: Copy; light: Copy; system: Copy };
   footer: { navigate: Copy; getInTouch: Copy; inquiry: Copy; rights: Copy; backToTop: Copy; nav: Copy };

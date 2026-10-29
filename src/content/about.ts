@@ -39,6 +39,7 @@ export const about: AboutContent = {
   education: {
     school: "École Marocaine des Sciences de l’Ingénieur",
     acronym: "EMSI",
+    campus: "Marrakech",
     degree: {
       en: "Engineering degree in Computer Science & Networks, Artificial Intelligence & Data Science",
       fr: "Cycle ingénieur en Informatique et Réseaux, spécialité Intelligence Artificielle & Data Science",

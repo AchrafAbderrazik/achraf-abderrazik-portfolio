@@ -27,7 +27,7 @@ export function About({ locale, about, location, readCaseStudy }: AboutProps) {
       label: labels.education,
       value: (
         <>
-          {education.school}
+          {`${education.school} (${education.acronym})${education.campus ? `, ${education.campus}` : ""}`}
           <span className="mt-1 block text-fg-muted">{education.degree}</span>
           <span className="mt-1 block text-fg-subtle">
             {education.period} · {education.status}

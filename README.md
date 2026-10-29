@@ -283,15 +283,23 @@ production URL, set it in `.env.local` (git-ignored).
 ## SEO
 
 - Title, description, canonical URL, Open Graph and Twitter cards on every
-  page, in its language, with `hreflang` alternates to the other language
+  page, in its language, with `hreflang` alternates to the other language.
+  The homepage title is "Achraf Abderrazik | AI & Data Science Engineer"
+  (French: "… | Ingénieur IA & Data Science"); other pages are
+  "<page> | Achraf Abderrazik"
 - Share images generated at build time, per language: one for the homepage,
   one per case study
-- `sitemap.xml` (both languages, with their alternates), `robots.txt` and a
-  web manifest
-- JSON-LD: `WebSite`, `ProfilePage` and `Person` (address, EMSI, languages,
-  LinkedIn/GitHub, services) and a `CreativeWork` per case study, in the page's
-  language. Team projects list you as a contributor, not the sole author. No
+- `sitemap.xml` (both languages, with their alternates, and the portrait as
+  the homepages' image), `robots.txt` and a web manifest
+- JSON-LD, one graph per page, in the page's language: `WebSite` and
+  `ProfilePage` with the `Person` (name, role, Marrakech, EMSI, languages,
+  LinkedIn/GitHub, services) on the homepage; `WebSite`, `Person`, a
+  `CreativeWork` and a `BreadcrumbList` on each case study; none on the 404.
+  The person is described once per page, with the same `@id` in both
+  languages. Team projects list you as a contributor, not the sole author. No
   ratings, reviews or invented claims.
+- LinkedIn and GitHub links use `rel="me"` (they are your own profiles) and a
+  descriptive accessible name
 - 404 pages answer with a real `404` status and `noindex`
 - One `h1` per page, a logical heading outline and descriptive link text
 

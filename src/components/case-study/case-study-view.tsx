@@ -477,7 +477,7 @@ function CaseLinks({
             <a
               href={githubProfile}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               className="text-fg underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-fg"
             >
               GitHub

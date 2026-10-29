@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import type { SocialLink } from "@/content/types";
+import type { ProfileLink } from "@/content/types";
 import { measureGeistMedium } from "@/lib/text-metrics";
 
 import { Container } from "../ui/container";
@@ -16,7 +16,7 @@ type SiteFooterProps = {
   inquiryHref: string;
   topHref: string;
   email: string | null;
-  socials: SocialLink[];
+  socials: ProfileLink[];
   labels: { navigate: string; getInTouch: string; inquiry: string; rights: string; backToTop: string; nav: string };
 };
 
@@ -65,7 +65,8 @@ export function SiteFooter({ name, description, nav, inquiryHref, topHref, email
                 <a
                   href={social.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
+                  aria-label={social.ariaLabel}
                   className="text-fg-muted transition-colors hover:text-fg"
                 >
                   {social.label}

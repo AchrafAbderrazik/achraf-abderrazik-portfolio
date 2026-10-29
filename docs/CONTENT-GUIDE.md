@@ -264,8 +264,12 @@ only their `label`s. Each inquiry includes the visitor's language (`locale`),
 so you know which one to reply in.
 
 **Search engines** (`site.ts` → `seo`): the homepage title and description
-for each language, keywords and the share-image headline. Each case study has
-its own `seo.description`.
+for each language, keywords and the share-image headline. Keep your name first
+in the title ("Achraf Abderrazik | AI & Data Science Engineer"): other pages are
+titled "<page> | Achraf Abderrazik" automatically. `givenName` and `familyName`
+(`site.ts`) and the school's `acronym` and `campus` (`about.ts`) go into the
+structured data, so keep them identical to how you appear on LinkedIn and
+GitHub. Each case study has its own `seo.description`.
 
 **Interface labels** (`ui.ts`): buttons, section names, screen-reader labels,
 the 404 page.

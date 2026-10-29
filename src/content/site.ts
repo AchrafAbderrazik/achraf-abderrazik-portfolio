@@ -7,6 +7,8 @@ import type { SiteContent } from "./types";
  */
 export const site: SiteContent = {
   name: "Achraf Abderrazik",
+  givenName: "Achraf",
+  familyName: "Abderrazik",
 
   // The professional title: the homepage heading, titles and structured data.
   role: { en: "AI & Data Science Engineer", fr: "Ingénieur IA & Data Science" },
@@ -46,14 +48,16 @@ export const site: SiteContent = {
   },
 
   seo: {
+    // The homepage title: your name first, then what you do. Other pages are
+    // titled "<page> | Achraf Abderrazik" (src/app/[locale]/layout.tsx).
     title: {
-      en: "Achraf Abderrazik — AI & Data Science Engineer | Portfolio",
-      fr: "Achraf Abderrazik — Ingénieur IA & Data Science | Portfolio",
+      en: "Achraf Abderrazik | AI & Data Science Engineer",
+      fr: "Achraf Abderrazik | Ingénieur IA & Data Science",
     },
     // Search results and social cards: keep under ~160 characters.
     description: {
-      en: "Achraf Abderrazik, AI & Data Science Engineer in Marrakech, Morocco, and final-year engineering student at EMSI: machine learning, LLM and automation projects.",
-      fr: "Achraf Abderrazik, ingénieur IA & Data Science à Marrakech, au Maroc, et élève ingénieur à l’EMSI : projets de machine learning, LLM et automatisation.",
+      en: "Portfolio of Achraf Abderrazik, AI & Data Science Engineer in Marrakech and final-year engineering student at EMSI: machine learning, NLP and LLM projects.",
+      fr: "Portfolio d’Achraf Abderrazik, ingénieur IA & Data Science à Marrakech et élève ingénieur en dernière année à l’EMSI : projets de machine learning, NLP et LLM.",
     },
     keywords: {
       en: [

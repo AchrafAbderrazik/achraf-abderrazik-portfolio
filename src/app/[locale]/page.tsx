@@ -52,7 +52,12 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         readCaseStudy={content.ui.work.readCaseStudy}
       />
       <Stack stack={content.stack} />
-      <Contact locale={locale} contact={content.contact} site={content.site} />
+      <Contact
+        locale={locale}
+        contact={content.contact}
+        site={content.site}
+        profileLabel={content.ui.profileLink}
+      />
       <ProfilePageJsonLd content={content} />
     </PageTransition>
   );
